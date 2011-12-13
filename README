@@ -1,0 +1,23 @@
+The GMoDS Based Runtime Agent Role Interpreter is an agent software
+architecture that takes an assigned goal and role as input and then
+"interprets" the role by mapping the role's high-level capabilities to a to a
+set of low-level agent capabilities.  For this architecture, the role is
+defined by a GMoDS role-level goal model, and a goal-capability map.
+The role-level goal model is decomposed into a goal tree whose leaves are
+mapped to role capabilities by the goal-capability map.  This agent
+architecture will be demonstrated using the CROS simulator.
+
+Designing agents using a generic role interpreter gives system designers great
+freedom and makes multiagent systems more flexible.  By using a role
+interpreter, agents do not need to have roles defined at design time; rather,
+they can be assigned at runtime as the organization sees fit.  This allows the
+organization to make optimizations at runtime to blend redundant roles
+together, or to decompose complex roles into multiple simple ones.
+
+Adding role interpreters to agents increases system modularity by cleanly
+separating role definitions from the agent architectures that execute them.
+Agents are simply given a formal role definition that they execute.  In our
+system, roles are defined using GMoDS goal models, allowing us to make use of
+its established execution semantics.  By defining roles using GMoDS, we can
+decompose role behavior into low-level functions that can be mapped directly
+to agent capabilities using a goal capability map.
