@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GoalCapabilityMap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="GoalCapabilityMap.xsd">
+	<!-- AdvancedBazooka -->
+	<Capability class="AdvancedBazooka" package="edu.ksu.cis.macr.simulator.capabilities">
+		<Method goal_name="fire" declared_name="fire">
+			<Parameter name="loc" class="LocationData" package="edu.ksu.cis.macr.simulator.capabilities"/>
+		</Method>
+		<Method goal_name="getNextFiringLocation" declared_name="getNextFiringLocation"/>
+		<Method goal_name="hasAmmo" declared_name="hasAmmo"/>
+		<Method goal_name="hasFiringLocation" declared_name="hasFiringLocation"/>
+		<Method goal_name="setTarget" declared_name="setTarget">
+			<Parameter name="loc" class="LocationData" package="edu.ksu.cis.macr.simulator.capabilities"/>
+		</Method>
+	</Capability>
+	<!-- AdvancedGoldGrabber -->
+	<Capability class="AdvancedGoldGrabber" package="edu.ksu.cis.macr.simulator.capabilities">
+		<Method goal_name="grab" declared_name="grab"/>
+		<Method goal_name="putGoldIntoBin" declared_name="putGoldIntoBin"/>
+		<Method goal_name="hasGold" declared_name="hasGold"/>
+	</Capability>
+	<!-- AdvancedMovement -->
+	<Capability class="AdvancedMovement" package="edu.ksu.cis.macr.simulator.capabilities">
+		<Method goal_name="getCurrentLocation" declared_name="getCurrentLocation"/>
+		<Method goal_name="getDestinationLocation" declared_name="getDestinationLocation"/>
+		<Method goal_name="getOldLocation" declared_name="getOldLocation"/>
+		<Method goal_name="isAtDestinationLocation" declared_name="isAtDestinationLocation"/>
+		<Method goal_name="move" declared_name="move"/>
+		<Method goal_name="setDestinationLocation" declared_name="setDestinationLocation">
+			<Parameter name="loc" class="LocationData" package="edu.ksu.cis.macr.simulator.capabilities"/>
+		</Method>
+	</Capability>
+	<!-- AdvancedSensors -->
+	<Capability class="AdvancedSensors" package="edu.ksu.cis.macr.simulator.capabilities">
+		<Method goal_name="isGoldAtLocation" declared_name="isGoldAtLocation">
+			<Parameter name="loc" class="LocationData" package="edu.ksu.cis.macr.simulator.capabilities"/>
+		</Method>
+		<Method goal_name="isLocationSearchable" declared_name="isLocationSearchable">
+			<Parameter name="loc" class="LocationData" package="edu.ksu.cis.macr.simulator.capabilities"/>
+		</Method>
+		<Method goal_name="isWumpiAtLocation" declared_name="isWumpiAtLocation">
+			<Parameter name="loc" class="LocationData" package="edu.ksu.cis.macr.simulator.capabilities"/>
+		</Method>
+		<Method goal_name="readOtherMaps" declared_name="readOthersMaps"/>
+		<Method goal_name="readSensors" declared_name="readSensors"/>
+		<Method goal_name="sendOthersMaps" declared_name="sendOthersMaps"/>
+		<Method goal_name="setLocationUnsearchable" declared_name="setLocationUnsearchable">
+			<Parameter name="loc" class="LocationData" package="edu.ksu.cis.macr.simulator.capabilities"/>
+		</Method>
+	</Capability>
+	<!-- OmacsInterface -->
+	<Capability class="OmacsInterface" package="edu.ksu.cis.macr.simulator.capabilities">
+		<Method goal_name="createReturnGoldGoal" declared_name="createReturnGoldGoal"/>
+	</Capability>
+	<!-- AdvancedCommunication -->
+	<Capability class="AdvancedCommunication" package="edu.ksu.cis.macr.simulator.capabilities">
+		<Method goal_name="broadcast" declared_name="broadcast">
+			<Parameter name="channelID" class="String" package="java.lang"/>
+			<Parameter name="content" class="Object" package="java.lang"/>
+		</Method>
+		<Method goal_name="broadcastIncludeSelf" declared_name="broadcastIncludeSelf">
+			<Parameter name="channelID" class="String" package="java.lang"/>
+			<Parameter name="content" class="Object" package="java.lang"/>
+		</Method>
+		<Method goal_name="getChannels" declared_name="getChannels"/>
+		<Method goal_name="receive" declared_name="receive"/>
+		<Method goal_name="removeChannel" declared_name="removeChannel">
+			<Parameter name="channelID" class="String" package="java.lang"/>
+		</Method>
+		<Method goal_name="send" declared_name="send">
+			<Parameter name="agentID" class="UniqueIdentifier" package="edu.ksu.cis.macr.organization.model.identifiers"/>
+			<Parameter name="channelID" class="String" package="java.lang"/>
+			<Parameter name="content" class="Object" package="java.lang"/>
+		</Method>
+	</Capability>
+</GoalCapabilityMap>

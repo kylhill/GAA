@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GoalDiagram version="1.1" name="GoldFetcherRole" embedded="false">
+	<Goal id="ba523b80-560f-4393-987b-72ae9f3bef30" name="FetchGold" number="0" preference="1.0" x="371" y="40" width="-1" height="-1" definition="" description="" color="No">
+		<parameter name="loc" type="LocationData"/>
+		<and>
+			<child>71aa0964-d1d7-4481-96d0-964138b1d6ab</child>
+		</and>
+		<and>
+			<child>8da06043-c3bc-40ca-a410-0dcdccfaf851</child>
+		</and>
+		<and>
+			<child>f66b4a2c-cb9c-4ba1-9180-975d1e8379a1</child>
+		</and>
+		<and>
+			<child>5c8bc49a-fe27-4292-9828-9882602085ea</child>
+		</and>
+		<and>
+			<child>4b333ef1-1b9c-4ec6-ac5d-985be9337a4a</child>
+		</and>
+		<and>
+			<child>544f06cb-3563-43c9-bd62-46053aaed5e0</child>
+		</and>
+	</Goal>
+	<Goal id="71aa0964-d1d7-4481-96d0-964138b1d6ab" name="setDestinationLocation" number="1" preference="1.0" x="23" y="144" width="-1" height="-1" definition="" description="" color="No">
+		<parameter name="loc" type="LocationData"/>
+		<triggers name="triggers" min="" max="">
+			<child>8da06043-c3bc-40ca-a410-0dcdccfaf851</child>
+		</triggers>
+	</Goal>
+	<Goal id="8da06043-c3bc-40ca-a410-0dcdccfaf851" name="isGoldAtLocation" number="2" preference="1.0" x="247" y="142" width="-1" height="-1" definition="" description="" color="No">
+		<parameter name="loc" type="LocationData"/>
+		<triggers name="true" min="" max="">
+			<child>f66b4a2c-cb9c-4ba1-9180-975d1e8379a1</child>
+		</triggers>
+	</Goal>
+	<Goal id="f66b4a2c-cb9c-4ba1-9180-975d1e8379a1" name="isAtDestinationLocation" number="3" preference="1.0" x="464" y="152" width="-1" height="-1" definition="" description="" color="No">
+		<triggers name="true" min="" max="">
+			<child>5c8bc49a-fe27-4292-9828-9882602085ea</child>
+		</triggers>
+		<triggers name="false" min="" max="">
+			<child>4b333ef1-1b9c-4ec6-ac5d-985be9337a4a</child>
+		</triggers>
+	</Goal>
+	<Goal id="5c8bc49a-fe27-4292-9828-9882602085ea" name="GrabGold" number="4" preference="1.0" x="698" y="150" width="-1" height="-1" definition="" description="" color="No">
+		<and>
+			<child>b12de517-2f07-4cd3-b832-98306c69a40a</child>
+		</and>
+		<and>
+			<child>a86bc4c7-eb02-49f4-aa90-7d25d1596081</child>
+		</and>
+	</Goal>
+	<Goal id="b12de517-2f07-4cd3-b832-98306c69a40a" name="grab" number="4.1" preference="1.0" x="604" y="227" width="-1" height="-1" definition="" description="" color="No">
+		<triggers name="true" min="" max="">
+			<child>a86bc4c7-eb02-49f4-aa90-7d25d1596081</child>
+		</triggers>
+	</Goal>
+	<Goal id="4b333ef1-1b9c-4ec6-ac5d-985be9337a4a" name="move" number="5" preference="1.0" x="449" y="252" width="-1" height="-1" definition="" description="" color="No">
+		<triggers name="true" min="" max="">
+			<child>544f06cb-3563-43c9-bd62-46053aaed5e0</child>
+		</triggers>
+	</Goal>
+	<Goal id="a86bc4c7-eb02-49f4-aa90-7d25d1596081" name="createReturnGoldGoal" number="4.2" preference="1.0" x="736" y="224" width="-1" height="-1" definition="" description="" color="No">
+	</Goal>
+	<Goal id="544f06cb-3563-43c9-bd62-46053aaed5e0" name="readSensors" number="5" preference="1.0" x="296" y="254" width="-1" height="-1" definition="" description="" color="No">
+		<triggers name="triggers" min="" max="">
+			<child>8da06043-c3bc-40ca-a410-0dcdccfaf851</child>
+		</triggers>
+	</Goal>
+</GoalDiagram>

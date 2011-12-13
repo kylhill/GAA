@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GoalDiagram version="1.1" name="AreaSearcherRole" embedded="false">
+	<Goal id="3207ee36-2f43-4891-a813-a17bcaad5bca" name="SearchArea" number="0" preference="1.0" x="408" y="40" width="-1" height="-1" definition="" description="" color="No">
+		<parameter name="loc" type="LocationData"/>
+		<and>
+			<child>9485662f-d199-45d3-ab99-edee084a6ef5</child>
+		</and>
+		<and>
+			<child>119b0d8b-be0e-4179-8e48-b11c46b0d7d1</child>
+		</and>
+		<and>
+			<child>82c28a01-4822-478d-9378-952391a583c0</child>
+		</and>
+		<and>
+			<child>1f7a0844-e1a3-463c-a9fe-39e5be77f588</child>
+		</and>
+		<and>
+			<child>edfe8fd4-1cc9-434a-aa1a-3d10490bd560</child>
+		</and>
+		<and>
+			<child>b0c4ba25-d940-466a-bf93-ff614d97ee84</child>
+		</and>
+	</Goal>
+	<Goal id="1f7a0844-e1a3-463c-a9fe-39e5be77f588" name="move" number="5" preference="1.0" x="777" y="173" width="-1" height="-1" definition="" description="" color="No">
+		<triggers name="false" min="" max="">
+			<child>edfe8fd4-1cc9-434a-aa1a-3d10490bd560</child>
+		</triggers>
+		<triggers name="true" min="" max="">
+			<child>119b0d8b-be0e-4179-8e48-b11c46b0d7d1</child>
+			<bendpoint x="719" y="243"/>
+			<bendpoint x="449" y="243"/>
+		</triggers>
+	</Goal>
+	<Goal id="edfe8fd4-1cc9-434a-aa1a-3d10490bd560" name="setLocationUnsearchable" number="6" preference="1.0" x="893" y="163" width="-1" height="-1" definition="" description="" color="No">
+		<parameter name="loc" type="LocationData"/>
+	</Goal>
+	<Goal id="119b0d8b-be0e-4179-8e48-b11c46b0d7d1" name="isAtDestinationLocation" number="2" preference="1.0" x="224" y="152" width="-1" height="-1" definition="" description="" color="No">
+		<parameter name="loc" type="LocationData"/>
+		<triggers name="false" min="" max="">
+			<child>b0c4ba25-d940-466a-bf93-ff614d97ee84</child>
+		</triggers>
+	</Goal>
+	<Goal id="82c28a01-4822-478d-9378-952391a583c0" name="isLocationSearchable" number="4" preference="1.0" x="586" y="161" width="-1" height="-1" definition="" description="" color="No">
+		<parameter name="loc" type="LocationData"/>
+		<triggers name="true" min="" max="">
+			<child>1f7a0844-e1a3-463c-a9fe-39e5be77f588</child>
+		</triggers>
+	</Goal>
+	<Goal id="9485662f-d199-45d3-ab99-edee084a6ef5" name="setDestinationLocation" number="1" preference="1.0" x="8" y="153" width="-1" height="-1" definition="" description="" color="No">
+		<parameter name="loc" type="LocationData"/>
+		<triggers name="triggers" min="" max="">
+			<child>119b0d8b-be0e-4179-8e48-b11c46b0d7d1</child>
+		</triggers>
+	</Goal>
+	<Goal id="b0c4ba25-d940-466a-bf93-ff614d97ee84" name="readSensors" number="3" preference="1.0" x="431" y="169" width="-1" height="-1" definition="" description="" color="No">
+		<triggers name="triggers" min="" max="">
+			<child>82c28a01-4822-478d-9378-952391a583c0</child>
+		</triggers>
+	</Goal>
+</GoalDiagram>

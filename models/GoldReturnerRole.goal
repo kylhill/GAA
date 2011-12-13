@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GoalDiagram version="1.1" name="GoldReturnerRole" embedded="false">
+	<Goal id="20c93eec-2317-43ac-b88f-e337eeb6a027" name="ReturnGold" number="0" preference="1.0" x="280" y="71" width="-1" height="-1" definition="" description="" color="No">
+		<parameter name="loc" type="LocationData"/>
+		<and>
+			<child>5382c065-c415-4a95-88fd-e35a877272de</child>
+		</and>
+		<and>
+			<child>6cc7b3dd-9fc4-41cc-8e9a-754b4da14303</child>
+		</and>
+		<and>
+			<child>c283ca38-c515-41f9-909d-06a9571338b8</child>
+		</and>
+		<and>
+			<child>e14f0762-0ca0-4082-873b-6c09b4904454</child>
+		</and>
+		<and>
+			<child>b3fa07a9-6320-4d8b-9fef-2debf99eff51</child>
+		</and>
+	</Goal>
+	<Goal id="5382c065-c415-4a95-88fd-e35a877272de" name="setDestinationLocation" number="1" preference="1.0" x="10" y="189" width="-1" height="-1" definition="" description="" color="No">
+		<parameter name="loc" type="LocationData"/>
+		<triggers name="triggers" min="" max="">
+			<child>6cc7b3dd-9fc4-41cc-8e9a-754b4da14303</child>
+		</triggers>
+	</Goal>
+	<Goal id="6cc7b3dd-9fc4-41cc-8e9a-754b4da14303" name="isAtDestinationLocation" number="2" preference="1.0" x="228" y="210" width="-1" height="-1" definition="" description="" color="No">
+		<triggers name="false" min="" max="">
+			<child>c283ca38-c515-41f9-909d-06a9571338b8</child>
+		</triggers>
+		<triggers name="true" min="" max="">
+			<child>e14f0762-0ca0-4082-873b-6c09b4904454</child>
+		</triggers>
+	</Goal>
+	<Goal id="c283ca38-c515-41f9-909d-06a9571338b8" name="move" number="3" preference="1.0" x="411" y="323" width="-1" height="-1" definition="" description="" color="No">
+		<triggers name="true" min="" max="">
+			<child>b3fa07a9-6320-4d8b-9fef-2debf99eff51</child>
+		</triggers>
+	</Goal>
+	<Goal id="e14f0762-0ca0-4082-873b-6c09b4904454" name="putGoldIntoBin" number="5" preference="1.0" x="471" y="210" width="-1" height="-1" definition="" description="" color="No">
+	</Goal>
+	<Goal id="b3fa07a9-6320-4d8b-9fef-2debf99eff51" name="readSensors" number="4" preference="1.0" x="256" y="324" width="-1" height="-1" definition="" description="" color="No">
+		<triggers name="triggers" min="" max="">
+			<child>6cc7b3dd-9fc4-41cc-8e9a-754b4da14303</child>
+		</triggers>
+	</Goal>
+</GoalDiagram>

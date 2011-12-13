@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GoalDiagram version="1.1" name="HunterKillerRole" embedded="false">
+	<Goal id="d51245ad-a42a-4d29-b5ae-1c3a4df074a8" name="KillWumpi" number="0" preference="1.0" x="338" y="31" width="-1" height="-1" definition="" description="" color="No">
+		<parameter name="loc" type="LocationData"/>
+		<and>
+			<child>02027c81-1e54-418f-9315-e6d1be69bf56</child>
+		</and>
+		<and>
+			<child>fd0f0176-102b-4972-969e-31edcece1c6f</child>
+		</and>
+		<and>
+			<child>680bfd52-fb00-4104-aeab-871ea783601e</child>
+		</and>
+		<and>
+			<child>d05487b0-1cf7-4b04-b102-77252f6227b2</child>
+		</and>
+		<and>
+			<child>e2fa9eaf-c2ad-4f2a-b886-08804069904b</child>
+		</and>
+		<and>
+			<child>7e302915-1cd0-4f61-8e06-11ec3fa12bf8</child>
+		</and>
+		<and>
+			<child>fd2f6ffc-901d-4f66-a8da-bf3b55e89731</child>
+		</and>
+	</Goal>
+	<Goal id="02027c81-1e54-418f-9315-e6d1be69bf56" name="setTarget" number="1" preference="1.0" x="37" y="200" width="-1" height="-1" definition="" description="" color="No">
+		<parameter name="loc" type="LocationData"/>
+		<triggers name="triggers" min="" max="">
+			<child>fd0f0176-102b-4972-969e-31edcece1c6f</child>
+		</triggers>
+	</Goal>
+	<Goal id="fd0f0176-102b-4972-969e-31edcece1c6f" name="SetupFiringLocation" number="2" preference="1.0" x="230" y="209" width="-1" height="-1" definition="" description="" color="No">
+		<and>
+			<child>8f93abb6-7193-491c-9602-eeb5657a7af3</child>
+		</and>
+		<and>
+			<child>d697ca8c-b8be-47f3-a49a-e9e71075fb63</child>
+		</and>
+		<and>
+			<child>f16880da-0c7c-4822-a0d8-3c925d1905e2</child>
+		</and>
+	</Goal>
+	<Goal id="d697ca8c-b8be-47f3-a49a-e9e71075fb63" name="getNextFiringLocation" number="2.2" preference="1.0" x="202" y="341" width="-1" height="-1" definition="" description="" color="No">
+		<triggers name="triggers" min="" max="">
+			<child>f16880da-0c7c-4822-a0d8-3c925d1905e2</child>
+			<parameter name="loc" type="LocationData"/>
+		</triggers>
+	</Goal>
+	<Goal id="f16880da-0c7c-4822-a0d8-3c925d1905e2" name="setDestinationLocation" number="2.3" preference="1.0" x="462" y="335" width="-1" height="-1" definition="" description="" color="No">
+		<parameter name="loc" type="LocationData"/>
+		<triggers name="triggers" min="" max="">
+			<child>680bfd52-fb00-4104-aeab-871ea783601e</child>
+		</triggers>
+	</Goal>
+	<Goal id="8f93abb6-7193-491c-9602-eeb5657a7af3" name="hasFiringLocation" number="2.1" preference="1.0" x="7" y="340" width="-1" height="-1" definition="" description="" color="No">
+		<triggers name="true" min="" max="">
+			<child>d697ca8c-b8be-47f3-a49a-e9e71075fb63</child>
+		</triggers>
+	</Goal>
+	<Goal id="680bfd52-fb00-4104-aeab-871ea783601e" name="isWumpiAtLocation" number="3" preference="1.0" x="429" y="202" width="-1" height="-1" definition="" description="" color="No">
+		<parameter name="loc" type="LocationData"/>
+		<triggers name="true" min="" max="">
+			<child>d05487b0-1cf7-4b04-b102-77252f6227b2</child>
+		</triggers>
+	</Goal>
+	<Goal id="d05487b0-1cf7-4b04-b102-77252f6227b2" name="isAtDestinationLocation" number="4" preference="1.0" x="619" y="214" width="-1" height="-1" definition="" description="" color="No">
+		<triggers name="true" min="" max="">
+			<child>7e302915-1cd0-4f61-8e06-11ec3fa12bf8</child>
+		</triggers>
+		<triggers name="false" min="" max="">
+			<child>e2fa9eaf-c2ad-4f2a-b886-08804069904b</child>
+		</triggers>
+	</Goal>
+	<Goal id="7e302915-1cd0-4f61-8e06-11ec3fa12bf8" name="fire" number="5" preference="1.0" x="649" y="333" width="-1" height="-1" definition="" description="" color="No">
+		<parameter name="loc" type="LocationData"/>
+		<triggers name="false" min="" max="">
+			<child>fd0f0176-102b-4972-969e-31edcece1c6f</child>
+			<bendpoint x="616" y="295"/>
+		</triggers>
+	</Goal>
+	<Goal id="e2fa9eaf-c2ad-4f2a-b886-08804069904b" name="move" number="6" preference="1.0" x="667" y="128" width="-1" height="-1" definition="" description="" color="No">
+		<triggers name="true" min="" max="">
+			<child>fd2f6ffc-901d-4f66-a8da-bf3b55e89731</child>
+		</triggers>
+		<triggers name="false" min="" max="">
+			<child>fd0f0176-102b-4972-969e-31edcece1c6f</child>
+		</triggers>
+	</Goal>
+	<Goal id="fd2f6ffc-901d-4f66-a8da-bf3b55e89731" name="readSensors" number="7" preference="1.0" x="779" y="131" width="-1" height="-1" definition="" description="" color="No">
+		<triggers name="triggers" min="" max="">
+			<child>d05487b0-1cf7-4b04-b102-77252f6227b2</child>
+		</triggers>
+	</Goal>
+</GoalDiagram>

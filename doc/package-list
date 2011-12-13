@@ -1,0 +1,7 @@
+edu.ksu.cis.macr.simulator
+edu.ksu.cis.macr.simulator.agents
+edu.ksu.cis.macr.simulator.capabilities
+edu.ksu.cis.macr.simulator.capabilities.map
+edu.ksu.cis.macr.simulator.goals
+edu.ksu.cis.macr.simulator.roles
+edu.ksu.cis.macr.simulator.roles.interpreter

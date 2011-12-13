@@ -1,0 +1,57 @@
+<?xml version="1.0" standalone="yes"?>
+<environment>
+    <objects type="Wall" package="edu.ksu.cis.macr.simulator.objects" category="tangible">
+        <complex x1="01" y1="01" x2="01" y2="25">Left</complex>
+        <complex x1="46" y1="01" x2="46" y2="25">Right</complex>
+        <complex x1="01" y1="01" x2="15" y2="01">BottomLeft</complex>
+        <complex x1="15" y1="11" x2="25" y2="11">Middle1</complex>
+        <complex x1="15" y1="01" x2="15" y2="11">Wall a</complex>
+        <complex x1="15" y1="05" x2="25" y2="05">Middle2</complex>
+        <complex x1="25" y1="01" x2="25" y2="05">Wall b</complex>
+        <complex x1="25" y1="07" x2="25" y2="11">Wall c</complex>
+        <complex x1="25" y1="17" x2="45" y2="17">Wall XX</complex>
+        <complex x1="15" y1="01" x2="15" y2="11">Wall d</complex>
+        <complex x1="25" y1="01" x2="45" y2="01">BottomRight</complex>
+        <complex x1="01" y1="25" x2="45" y2="25">Top</complex>
+        <complex x1="30" y1="05" x2="35" y2="10">Box1</complex>
+        <complex x1="37" y1="05" x2="42" y2="10">Box2</complex>
+    </objects>
+    
+    <objects type="Gold" package="edu.ksu.cis.macr.simulator.objects" category="intangible">
+        <simple x="34" y="22">Gold 1</simple>
+        <simple x="36" y="08">Gold 2</simple>
+        <simple x="17" y="10">Gold 3</simple>
+        <simple x="04" y="22">Gold 4</simple>
+        <simple x="16" y="08">Gold 5</simple>
+        <simple x="27" y="10">Gold 6</simple>
+    </objects>
+    
+    <objects type="Pit" package="edu.ksu.cis.macr.simulator.objects" category="intangible">
+        <simple x="02" y="15">Pit 1</simple>
+        <simple x="05" y="15">Pit 2</simple>
+        <simple x="15" y="05">Pit 3</simple>
+        <simple x="20" y="20">Pit 4</simple>
+        <simple x="20" y="07">Pit 5</simple>
+        <simple x="30" y="20">Pit 6</simple>
+        <simple x="32" y="13">Pit 7</simple>
+        <simple x="35" y="03">Pit 8</simple>
+        <simple x="41" y="15">Pit 9</simple>
+    </objects>
+    
+    <objects type="Bin" package="edu.ksu.cis.macr.simulator.objects" category="tangible">
+        <simple x="2" y="2">Bin 1</simple>
+    </objects>
+
+    <agents type="Wumpus" package="edu.ksu.cis.macr.simulator.agents">
+        <agent x="05" y="17">Wumpus 1</agent>
+        <agent x="10" y="13">Wumpus 2</agent>
+        <agent x="18" y="10">Wumpus 3</agent>
+        <agent x="25" y="13">Wumpus 4</agent>
+        <agent x="28" y="13">Wumpus 5</agent>
+        <agent x="38" y="02">Wumpus 6</agent>
+    </agents>
+    
+    <agents type="GoldDigger" package="edu.ksu.cis.macr.simulator.agents">
+        <agent x="2" y="3">GoldDigger 1</agent>
+    </agents>
+</environment>
